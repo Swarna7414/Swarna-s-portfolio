@@ -15,3 +15,16 @@ document.addEventListener("scroll", function() {
       }
     });
   });
+
+  function openMailClient() {
+    const mailtoLink = "mailto:swarnasaisankarnaidu369@gmail.com";
+    const gmailLink = "https://mail.google.com/mail/?view=cm&fs=1&to=swarnasaisankarnaidu369@gmail.com";
+    
+    const mailWindow = window.open(mailtoLink, "_blank");
+
+    setTimeout(() => {
+      if (!mailWindow || mailWindow.closed || typeof mailWindow.closed == "undefined") {
+        window.open(gmailLink, "_blank");
+      }
+    }, 1000);
+  }
